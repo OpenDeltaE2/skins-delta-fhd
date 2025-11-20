@@ -91,9 +91,9 @@
 
 	<windowstyle id="0" type="skinned">
     <color name="Background" color="DarkBlue" /> <!-- mod -->
-    <color name="LabelForeground" color="white" />
-    <color name="ListboxBackground" color="transparent" />
-    <color name="ListboxForeground" color="white" />
+    <color name="LabelForeground" color="foreground" />
+    <color name="ListboxBackground" color="background" />
+    <color name="ListboxForeground" color="foreground" />
     <color name="ListboxSelectedBackground" color="selectorcolor" />
     <color name="ListboxSelectedForeground" color="selectedFG" />
     <color name="ListboxMarkedBackground" color="un40a0aa0" />
@@ -118,7 +118,6 @@
 		</borderset>
 	</windowstyle>
 
-<!-- Volume -->
   <!-- *************************************** -->   
 	<!-- Volume -->
     <screen backgroundColor="background" zPosition="10" flags="wfNoBorder" name="Volume" position="185,30" size="1550,40" title="Volume">
