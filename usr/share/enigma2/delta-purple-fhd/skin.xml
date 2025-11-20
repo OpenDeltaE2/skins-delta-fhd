@@ -32,7 +32,7 @@
 	<!-- Colors -->
 
 	<colors>
-	    <color name="aqua" value="#0000ffff" />
+	<color name="aqua" value="#0000ffff" />
     <color name="#1c2c5c" value="#001c2c5c" />
     <color name="#232323" value="#00232323" />
     <color name="#25062748" value="#25062748" />
@@ -117,38 +117,32 @@
 			<pixmap filename="border/line.png" pos="bpBottom"/>
 		</borderset>
 	</windowstyle>
-  <windowstyle id="0" type="skinned">
-    <title offset="40,5" font="Regular;32" />
-    <color name="Background" color="transparent" /> <!-- mod -->
-    <color name="LabelForeground" color="foreground" />
-    <color name="ListboxBackground" color="background" />
-    <color name="ListboxForeground" color="foreground" />
-    <color name="ListboxSelectedBackground" color="selectorcolor" />
-    <color name="ListboxSelectedForeground" color="selectedFG" />
-    <color name="ListboxMarkedBackground" color="un40a0aa0" />
-    <color name="ListboxMarkedForeground" color="red" />
-    <color name="ListboxMarkedAndSelectedBackground" color="un4a00a0a" />
-    <color name="ListboxMarkedAndSelectedForeground" color="red" />
-    <color name="WindowTitleForeground" color="foreground" />
-    <color name="WindowTitleBackground" color="background" />
-    <borderset name="bsWindow">
-      <pixmap filename="window/top_left_corner.png" pos="bpTopLeft" />
-      <pixmap filename="window/top_edge.png" pos="bpTop" />
-      <pixmap filename="window/top_right_corner.png" pos="bpTopRight" />
-      <pixmap filename="window/left_edge.png" pos="bpLeft" />
-      <pixmap filename="window/right_edge.png" pos="bpRight" />
-      <pixmap filename="window/bottom_left_corner.png" pos="bpBottomLeft" />
-      <pixmap filename="window/bottom_edge.png" pos="bpBottom" />
-      <pixmap filename="window/bottom_right_corner.png" pos="bpBottomRight" />
-    </borderset>
-    <borderset name="bsListboxEntry">
-      <pixmap filename="border/line.png" pos="bpTop" />
-      <pixmap filename="border/line.png" pos="bpBottom" />
-      <pixmap filename="border/vline.png" pos="bpLeft" />
-      <pixmap filename="border/vline.png" pos="bpRight" />
-    </borderset>
-  </windowstyle>
- 
+  <!-- *************************************** -->   
+	<!-- Volume -->
+    <screen backgroundColor="background" zPosition="10" flags="wfNoBorder" name="Volume" position="185,30" size="1550,40" title="Volume">
+     <widget backgroundColor="background" font="Regular;30" halign="center" position="1442,3" render="VolumeText" size="60,35" source="global.CurrentTime" zPosition="10" foregroundColor="red" transparent="1" />
+     <eLabel text="%" position="1505,2" size="40,35" zPosition="5" halign="left" font="Regular;30" backgroundColor="background" transparent="1" />
+     <widget name="Volume" pixmap="infobar/volume.png" position="20,10" size="1400,20" zPosition="10" transparent="1" />
+    </screen>
+    <screen name="Mute" title="Mute" position="140,25" size="45,45" backgroundColor="transparent" zPosition="10" flags="wfNoBorder">
+     <ePixmap pixmap="infobar/mute.png" position="0,0" size="45,45" alphatest="on" zPosition="0" />
+    </screen>
+<!-- Buffer Indicator -->
+	    <screen name="BufferIndicator" title="" position="c-300,45" size="600,48" backgroundColor="transparent" flags="wfNoBorder" zPosition="100">
+		<widget name="status" position="0,0" size="600,48" backgroundColor="transparent" transparent="1" font="Regular;36" borderColor="black" borderWidth="2" valign="center" halign="center"/>
+	    </screen>
+<!-- JobView -->
+	    <screen name="JobView" position="fill" title="Job View" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<widget source="job_name" render="Label" position="780,105" size="1110,52" font="Regular;37"/>
+		<widget source="job_task" render="Label" position="780,282" size="1110,45" font="Regular;36"/>
+		<widget source="job_progress" render="Progress" position="780,390" size="1110,54" borderWidth="2" backgroundColor="#254f7497"/>
+		<widget source="job_progress" render="Label" position="780,393" size="1110,48" font="Regular;42" foregroundColor="#000000" zPosition="2" halign="center" transparent="1"	>
+	       <convert type="ProgressToText"/>
+		</widget>
+		<widget source="job_status" render="Label" position="780,465" size="1110,39" font="Regular;34"/>
+		<widget name="config" position="780,528" size="1110,36" itemHeight="38" font="Regular;28"/>
+	    </screen>
 <!-- Templates -->
 	    <screen name="PlayerTemplate">
 		<widget source="session.CurrentService" render="Label" position="c-624,6" size="1248,74" backgroundColor="transparent" zPosition="1" foregroundColor="foreground" borderWidth="2" font="Regular;36" borderColor="black" valign="center" halign="center">
@@ -236,8 +230,7 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
-	
-  <!-- Button Graphic Templates -->
+<!-- Button Graphic Templates -->
 	<screen name="ButtonGraphicRed">
 		<widget objectTypes="key_red,StaticText" source="key_red" render="Pixmap" pixmap="buttons/red.png" position="192,1032" size="34,34" zPosition="1" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
@@ -385,62 +378,10 @@
 		<widget name="description" objectTypes="description,Button,Label" position="30,570" size="720,300" font="Regular;32" valign="top" halign="block"/>
 		<widget source="description" render="Label" objectTypes="description,StaticText" position="30,570" size="720,300" font="Regular;32" valign="top" halign="block"/>
 	</screen>
-  <!-- Hideable buttons -->	
 	<screen name="KeyPrevNextTemplate_Hideable">
 		<widget name="h_prev" pixmap="buttons/key_prev.png" zPosition="1" alphatest="blend" position="30,1031" size="52,38"/>
 		<widget name="h_next" pixmap="buttons/key_next.png" zPosition="1" alphatest="blend" position="82,1031" size="52,38"/>
 	</screen>
-  <!-- Config and list template. Some people use "config" and others use "list" -->
-  <screen name="ConfigTemplate">
-    <widget name="config" conditional="config" position="780,105" size="1110,900" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
-    <widget name="list" conditional="list" position="780,100" size="1110,900" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
-  </screen>
-  <screen name="DescriptionTemplate">
-    <widget name="description" objectTypes="description,Button,Label" position="30,570" size="720,300" font="Regular;32" valign="top" halign="block" />
-    <widget source="description" render="Label" objectTypes="description,StaticText" position="30,570" size="720,300" font="Regular;32" valign="top" halign="block" />
-  </screen>
-  <!-- Setup Panel PIG template -->
-  <screen name="SetupPanelPIG">
-    <panel name="PigTemplate" />
-    <panel name="ConfigTemplate" />
-    <panel name="DescriptionTemplate" />
-    <widget name="HelpWindow" conditional="HelpWindow" pixmap="buttons/vkey_icon.png" position="3,310" zPosition="1" size="1,1" transparent="1" alphatest="on" />
-    <widget name="introduction" conditional="introduction" position="0,0" size="0,0" />
-  </screen>
-	
-  <screen name="wizard_rc_template">
-    <widget name="rc" position="955,100" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphaTest="blend" />
-    <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphaTest="blend" />
-    <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphaTest="blend" />
-    <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphaTest="blend" />
-    <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphaTest="blend" />
-  </screen>  
-  <!-- *************************************** -->   
-	<!-- Volume -->
-    <screen backgroundColor="background" zPosition="10" flags="wfNoBorder" name="Volume" position="185,30" size="1550,40" title="Volume">
-     <widget backgroundColor="background" font="Regular;30" halign="center" position="1442,3" render="VolumeText" size="60,35" source="global.CurrentTime" zPosition="10" foregroundColor="red" transparent="1" />
-     <eLabel text="%" position="1505,2" size="40,35" zPosition="5" halign="left" font="Regular;30" backgroundColor="background" transparent="1" />
-     <widget name="Volume" pixmap="infobar/volume.png" position="20,10" size="1400,20" zPosition="10" transparent="1" />
-    </screen>
-    <screen name="Mute" title="Mute" position="140,25" size="45,45" backgroundColor="transparent" zPosition="10" flags="wfNoBorder">
-     <ePixmap pixmap="infobar/mute.png" position="0,0" size="45,45" alphatest="on" zPosition="0" />
-    </screen>
-<!-- Buffer Indicator -->
-	    <screen name="BufferIndicator" title="" position="c-300,45" size="600,48" backgroundColor="transparent" flags="wfNoBorder" zPosition="100">
-		<widget name="status" position="0,0" size="600,48" backgroundColor="transparent" transparent="1" font="Regular;36" borderColor="black" borderWidth="2" valign="center" halign="center"/>
-	    </screen>
-<!-- JobView -->
-	    <screen name="JobView" position="fill" title="Job View" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
-		<widget source="job_name" render="Label" position="780,105" size="1110,52" font="Regular;37"/>
-		<widget source="job_task" render="Label" position="780,282" size="1110,45" font="Regular;36"/>
-		<widget source="job_progress" render="Progress" position="780,390" size="1110,54" borderWidth="2" backgroundColor="#254f7497"/>
-		<widget source="job_progress" render="Label" position="780,393" size="1110,48" font="Regular;42" foregroundColor="#000000" zPosition="2" halign="center" transparent="1"	>
-	       <convert type="ProgressToText"/>
-		</widget>
-		<widget source="job_status" render="Label" position="780,465" size="1110,39" font="Regular;34"/>
-		<widget name="config" position="780,528" size="1110,36" itemHeight="38" font="Regular;28"/>
-	    </screen>
 
   <!-- InfoBar -->
   <screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
