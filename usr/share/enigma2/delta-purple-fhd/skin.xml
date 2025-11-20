@@ -1,57 +1,38 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <skin>
-  <!-- Skin: PLi-HD1, based on Magic_HD_Shadow_MiniTV by Vali (c)2009-2010 -->
-  <!-- This skin include derived work from VU+NL, Milo, IMS and others -->
-  <!-- This skin is a Freeware. Everyone can modify and use it in other images. -->
-  <!-- BUT DO NOT REMOVE OR CHANGE THE SECOND LINE IN !!! -->
-  <!-- Do whatever you want with this skin, but don't tell it's yours, or your idea -->
-  <!-- Head -->
-  <output id="0">
-    <resolution bpp="32" xres="1920" yres="1080" />
-  </output>
-  <fonts>
-    <font name="Regular" filename="HandelGotD.ttf" scale="100" />
-    <font name="LCD" filename="lcd.ttf" scale="100" />
-    <font name="Console" filename="tuxtxt.ttf" scale="100" />
-    <font name="Fixed" filename="andale.ttf" scale="100" />
-    <font name="DejaVuSans" filename="DejaVuSans.ttf" scale="100" />
-	<font name="error" filename="error.ttf" scale="100"/>
-    <font name="Menu" filename="nmsbd.ttf" scale="100" />	
-    <alias name="ChoiceList" font="Regular" size="28" height="38" />
-    <alias name="TextNormal" font="Regular" size="28" height="38" />
-    <alias name="ChoiceBoxDescription" font="Regular" size="22" height="25" />
-    <alias name="FileList" font="Regular" size="28" height="38" />
-    <alias name="FileListMulti" font="Regular" size="28" height="38" />
-    <alias name="PluginBrowser0" font="Regular" size="32" height="76" />
-    <alias name="PluginBrowser1" font="Regular" size="22" />
-    <alias name="ServiceInfo" font="Regular" size="30" height="45" />
-    <alias name="SelectionList" font="Regular" size="30" height="45" />
-    <alias name="ImsSelectionList" font="Regular" size="28" height="30" />
-    <alias name="PartnerBoxEntryList0" font="Regular" size="28" height="38" />
-    <alias name="PartnerBoxEntryList1" font="Regular" size="28" />
-    <alias name="PartnerBoxE2TimerMenu0" font="Regular" size="32" height="114" />
-    <alias name="PartnerBoxE2TimerMenu1" font="Regular" size="28" />
-    <alias name="PartnerBoxBouquetList0" font="Regular" size="32" height="45" />
-    <alias name="PartnerBoxBouquetList1" font="Regular" size="28" />
-    <alias name="PartnerBoxChannelList0" font="Regular" size="32" height="114" />
-    <alias name="PartnerBoxChannelList1" font="Regular" size="28" />
-    <alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38" />
-    <alias name="PartnerBoxChannelEPGList1" font="Regular" size="24" />
-    <alias name="VirtualKeyBoard" font="DejaVuSans" size="42" height="68" />
-    <alias name="HelpMenuList" font="Regular" size="30" height="45" />
-    <alias name="HelpMenuListExt0" font="Regular" size="32" height="75" />
-    <alias name="HelpMenuListExt1" font="Regular" size="28" />
-    <alias name="Dreamexplorer" font="Regular" size="30" height="45" />
-    <alias name="PlayList" font="Regular" size="28" height="38" />
-    <alias name="AutotimerList" font="Regular" size="22" height="25" />
-    <alias name="AutotimerListExt0" font="Regular" size="28" />
-    <alias name="AutotimerListExt1" font="Regular" size="22" height="95" />
-    <alias name="FcZipArchiver" font="Fixed" size="26" height="45" />
-    <alias name="AutomaticVolumeAdjustment0" font="Regular" size="28" />
-    <alias name="AutomaticVolumeAdjustment1" font="Regular" size="28" />
-  </fonts>
-  <!-- Colors -->
-  <colors>
+	<!-- Skin: Delta Purple FHD based on Magic_HD_Shadow_MiniTV by Vali (c)2009-2010  -->
+	<!-- This skin modified by areadelta -->
+	<!-- This skin include derived work from VU+NL, Milo, Littlesat, DelaGroov        -->
+	<!-- This skin is a Freeware. Everyone can modify and use it in other images.     -->
+	<!-- Do whatever you want with this skin, but don't tell it's yours, or your idea -->
+
+	<output id="0">
+		<resolution bpp="32" xres="1920" yres="1080"/>
+	</output>
+
+	<fonts>
+		<font name="Regular" filename="HandelGotD.ttf" scale="100"/>
+		<font name="LCD" filename="lcd.ttf" scale="100"/>
+		<font name="Console" filename="tuxtxt.ttf" scale="100"/>
+		<font name="Fixed" filename="andale.ttf" scale="100"/>
+		<font name="error" filename="error.ttf" scale="100"/>
+	</fonts>
+
+	<!-- Parameters -->
+
+	<parameters>
+		<parameter name="AboutHddSplit" value="1"/>
+	</parameters>
+	
+	<switchpixmap>
+		<pixmap name="menu_on" filename="icons/menu_on.png"/>
+		<pixmap name="menu_off" filename="icons/menu_off.png"/>
+	</switchpixmap>
+
+	<!-- Colors -->
+
+	<colors>
+	    <color name="aqua" value="#0000ffff" />
     <color name="#1c2c5c" value="#001c2c5c" />
     <color name="#232323" value="#00232323" />
     <color name="#25062748" value="#25062748" />
@@ -102,43 +83,40 @@
     <color name="yellow" value="#00f9c731" />
     <color name="yellowsoft" value="#00ccac68" />
     <color name="yellowtransparent" value="#084b4b00" />
-	<color name="fucsia" value="#f400a1" />
+	<color name="DarkBlue" value="#00008B" />
+	<color name="MidnightBlue" value="#191970" />	
   </colors>
-  <parameters>
-    <parameter name="AllowUserDatesAndTimesDisplay" value="1,1" />
-    <parameter name="AllowUserDatesAndTimes" value="1,1" />
-    <parameter name="AutomaticVolumeAdjustmentEntryList0" value="20,2,980,35" />
-    <parameter name="AutomaticVolumeAdjustmentEntryList1" value="1000,2,80,35" />
-    <parameter name="AutotimerListIcons" value="*icons/small/lock_on.png,*icons/small/lock_off.png,*icons/small/timer_rec.png,*icons/small/timer_zap.png" />
-    <parameter name="AutotimerListIcon" value="4,5,24,25" />
-    <parameter name="AutotimerListRectypeicon" value="34,8,24,25" />
-    <parameter name="ChoicelistButtonIcon" value="5,0,50,50" />
-    <parameter name="ChoicelistName" value="68,3,1000,31" />
-    <parameter name="ConfigListSeperator" value="350" />
-    <parameter name="ConfigListSlider" value="22,3" />
-    <parameter name="ExpandableListDescr" value="55,2,1000,45" />
-    <parameter name="ExpandableListIcon" value="0,0,55,38" />
-    <parameter name="FcFileListIcon" value="10,4,30,30" />
-    <parameter name="FcFileListMultiIcon" value="45,4,30,30" />
-    <parameter name="FcFileListMultiLock" value="2,0,30,30" />
-    <parameter name="FcFileListMultiName" value="90,2,1000,32" />
-    <parameter name="FcFileListName" value="68,2,1000,34" />
-    <parameter name="ImsSelectionListDescr" value="46,4,1000,45" />
-    <parameter name="ImsSelectionListLock" value="0,2,36,36" />
-    <parameter name="PluginBrowserDescr" value="125,42,30" />
-    <parameter name="PluginBrowserDownloadDescr" value="90,40,30" />
-    <parameter name="PluginBrowserDownloadIcon" value="10,0,80,60" />
-    <parameter name="PluginBrowserDownloadName" value="90,0,40" />
-    <parameter name="PluginBrowserIcon" value="10,17,100,40" />
-    <parameter name="PluginBrowserName" value="125,5,40" />
-    <parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff" />
-    <parameter name="VirtualKeyBoard" value="68,68" />
-  </parameters>
-  <switchpixmap>
-    <pixmap name="menu_on" filename="icons/menu_on.png" />
-    <pixmap name="menu_off" filename="icons/menu_off.png" />
-  </switchpixmap>
-  <!-- Window -->
+
+	<!-- Window -->
+
+	<windowstyle id="0" type="skinned">
+    <color name="Background" color="MidnightBlue" /> <!-- mod -->
+    <color name="LabelForeground" color="foreground" />
+    <color name="ListboxBackground" color="DarkBlue" />
+    <color name="ListboxForeground" color="foreground" />
+    <color name="ListboxSelectedBackground" color="selectorcolor" />
+    <color name="ListboxSelectedForeground" color="selectedFG" />
+    <color name="ListboxMarkedBackground" color="un40a0aa0" />
+    <color name="ListboxMarkedForeground" color="red" />
+    <color name="ListboxMarkedAndSelectedBackground" color="un4a00a0a" />
+    <color name="ListboxMarkedAndSelectedForeground" color="red" />
+    <color name="WindowTitleForeground" color="foreground" />
+    <color name="WindowTitleBackground" color="background" />
+		<borderset name="bsWindow">
+			<pixmap filename="window/top_left_corner.png" pos="bpTopLeft"/>
+			<pixmap filename="window/top_edge.png" pos="bpTop"/>
+			<pixmap filename="window/top_right_corner.png" pos="bpTopRight"/>
+			<pixmap filename="window/left_edge.png" pos="bpLeft"/>
+			<pixmap filename="window/right_edge.png" pos="bpRight"/>
+			<pixmap filename="window/bottom_left_corner.png" pos="bpBottomLeft"/>
+			<pixmap filename="window/bottom_edge.png" pos="bpBottom"/>
+			<pixmap filename="window/bottom_right_corner.png" pos="bpBottomRight"/>
+		</borderset>
+		<borderset name="bsListboxEntry">
+			<pixmap filename="border/line.png" pos="bpTop"/>
+			<pixmap filename="border/line.png" pos="bpBottom"/>
+		</borderset>
+	</windowstyle>
   <windowstyle id="0" type="skinned">
     <title offset="40,5" font="Regular;32" />
     <color name="Background" color="transparent" /> <!-- mod -->
@@ -171,98 +149,93 @@
     </borderset>
   </windowstyle>
  
-  <!-- Templates -->
-  <screen name="PlayerTemplate">
-    <widget source="session.CurrentService" render="Label" position="c-624,6" size="1248,74" backgroundColor="transparent" zPosition="1" foregroundColor="foreground" borderWidth="2" font="Regular;36" borderColor="black" valign="center" halign="center">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-    <ePixmap pixmap="dvr/scale1024.png" position="42,87" size="1536,12" zPosition="1" />
-    <widget source="session.CurrentService" render="PositionGauge" position="42,84" size="1536,18" transparent="1" zPosition="4" pointer="dvr/position_pointer1024.png:1536,4">
-      <convert type="ServicePosition">Gauge</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="42,46" size="135,37" backgroundColor="transparent" zPosition="4" foregroundColor="foreground" borderWidth="2" font="Regular;33" borderColor="black" valign="center" halign="left">
-      <convert type="ServicePosition">Position,ShowHours</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="1402,46" size="175,37" backgroundColor="transparent" zPosition="4" foregroundColor="foreground" borderWidth="2" font="Regular;33" borderColor="black" valign="center" halign="right">
-      <convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
-    </widget>
-    <widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="1590,79" size="30,30" zPosition="3" alphatest="on">
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="global.CurrentTime" render="Label" borderWidth="2" position="1428,4" size="150,37" backgroundColor="transparent" noWrap="1" zPosition="1" foregroundColor="foreground" font="Regular;33" valign="center" halign="right">
-      <convert type="ClockToText">Format:%-H:%M</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="c-109,105" size="219,31" zPosition="2" backgroundColor="transparent" foregroundColor="foreground" font="Regular;30" borderWidth="2" valign="top" halign="center">
-      <convert type="PliExtraInfo">ResolutionString</convert>
-    </widget>
-    <eLabel position="42,105" size="225,195" backgroundColor="transparent" borderWidth="2" font="Regular;37" borderColor="black" halign="left" text="&gt;" zPosition="1" />
-    </screen>
-      <!-- Logo -->
-  <screen name="logos">  
-    <ePixmap pixmap="/usr/share/enigma2/logos/boxlogo.png" position="46,12" zPosition="2" size="136,64" backgroundColor="transparent" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="../logo/logo-white.png" position="30,967" size="283,51" scale="1" zPosition="1" alphatest="blend" /> 
-  </screen>  
-   <!-- Template Background -->
-  <screen name="Background">
-    <ePixmap position="0,0" size="1920,1080" zPosition="-2" pixmap="infobar/back_menu.png" alphatest="off" backgroundColor="transparent" />	
-    <ePixmap position="0,90" size="1920,900" zPosition="-2" pixmap="infobar/bg-purple.jpg" backgroundColor="transparent" transparent="1" />	
-  </screen>
-  <!-- --> 
-  <screen name="TopTemplate">
-    <panel name="logos" />  
-    <widget source="ScreenPath" render="Label" position="200,5" size="1860,20" backgroundColor="transparent" transparent="1" zPosition="1" font="Menu;14" valign="center" halign="left" />
-    <widget source="Title" render="Label" position="200,12" size="1000,64" backgroundColor="transparent" transparent="1" zPosition="1" font="Menu,28" valign="center" halign="left" />
-      <widget source="global.CurrentTime" render="Label" position="1200,20" size="500,30" backgroundColor="transparent" transparent="1" zPosition="1" font="Menu;28" valign="center" halign="left">
-        <convert type="ClockToText">Format:%A %e %B %Y</convert>
-      </widget>
-      <widget source="global.CurrentTime" render="Label" position="1700,20" size="220,30" backgroundColor="transparent" transparent="1" zPosition="1" font="Menu;28" valign="center" halign="left">
-         <convert type="ClockToText">Format:%H:%M:%S</convert>
-      </widget>	  
-  </screen>
-  <screen name="BasicTemplate">
-    <panel name="TopTemplate" />
-    <panel name="ButtonTemplate" />
-    <eLabel position="0,1022" size="1920,58" backgroundColor="transparent" />
-  </screen>
-  <screen name="TextTemplate">
-    <widget name="text" position="30,522" size="720,481" backgroundColor="transparent" transparent="1" zPosition="1" font="Regular;30" />
-  </screen>
-  <screen name="SelectionTemplate">
-    <panel name="BasicTemplate" />
-    <widget source="session.VideoPicture" render="Pig" position="30,120" size="720,405" backgroundColor="transparent" zPosition="1" />
-    <widget source="session.CurrentService" render="Label" position="30,125" size="720,30" zPosition="1" foregroundColor="white" transparent="1" font="Regular;28" borderColor="black" borderWidth="2" noWrap="1" valign="center" halign="center">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-  </screen>
-  <screen name="PigTemplate">
-    <panel name="SelectionTemplate" />
-    <panel name="logos" />
-  </screen>
-  <screen name="PigLessTemplate">
-    <panel name="BasicTemplate" />
-    <panel name="logos" />	
-  </screen>
-  <screen name="MenuTemplate">
-    <panel name="logos" />
-  	<panel name="Background" />
+<!-- Templates -->
+	    <screen name="PlayerTemplate">
+		<widget source="session.CurrentService" render="Label" position="c-624,6" size="1248,74" backgroundColor="transparent" zPosition="1" foregroundColor="foreground" borderWidth="2" font="Regular;36" borderColor="black" valign="center" halign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<ePixmap pixmap="dvr/scale1024.png" position="42,87" size="1536,12" zPosition="1"/>
+		<widget source="session.CurrentService" render="PositionGauge" position="42,84" size="1536,18" transparent="1" zPosition="4" pointer="dvr/position_pointer1024.png:1536,4">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="42,46" size="135,37" backgroundColor="transparent" zPosition="4" foregroundColor="foreground" borderWidth="2" font="Regular;33" borderColor="black" valign="center" halign="left">
+			<convert type="ServicePosition">Position,ShowHours</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1402,46" size="175,37" backgroundColor="transparent" zPosition="4" foregroundColor="foreground" borderWidth="2" font="Regular;33" borderColor="black" valign="center" halign="right">
+			<convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="1590,79" size="30,30" zPosition="3" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1428,4" size="150,37" backgroundColor="transparent" noWrap="1" zPosition="1" foregroundColor="foreground" font="Regular;33" valign="center" halign="right">
+			<convert type="ClockToText">Format:%-H:%M</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="c-109,105" size="219,31" zPosition="2" backgroundColor="transparent" foregroundColor="foreground" font="Regular;30" borderWidth="2" valign="top" halign="center">
+           <convert type="ExtraInfo">ResolutionString</convert>
+		</widget>
+		<eLabel position="42,105" size="225,195" backgroundColor="transparent" borderWidth="2" font="Regular;37" borderColor="black" halign="left" text=">" zPosition="1"/>
+	    </screen>
+    <!-- Template Background -->
+        <screen name="Background">
+        <ePixmap position="0,0" size="1920,1080" zPosition="-2" pixmap="infobar/bg-purple.jpg" alphatest="off" backgroundColor="transparent" />		
+        </screen>
+    <!-- --> 		
+	    <screen name="TopTemplate">
+        <widget source="ScreenPath" render="Label" position="200,5" size="1860,20" backgroundColor="transparent" transparent="1" zPosition="1" font="Menu;14" valign="center" halign="left" />
+        <widget source="Title" render="Label" position="200,12" size="1000,64" backgroundColor="transparent" transparent="1" zPosition="1" font="Menu,28" valign="center" halign="left" />
+        <widget source="global.CurrentTime" render="Label" position="1200,20" size="500,30" backgroundColor="transparent" transparent="1" zPosition="1" font="Menu;28" valign="center" halign="left">
+           <convert type="ClockToText">Format:%A %e %B %Y</convert>
+        </widget>
+         <widget source="global.CurrentTime" render="Label" position="1700,20" size="220,30" backgroundColor="transparent" transparent="1" zPosition="1" font="Menu;28" valign="center" halign="left">
+           <convert type="ClockToText">Format:%H:%M:%S</convert>
+        </widget>
+	    <eLabel position="10,80" size="1900,2" backgroundColor="white" />	  
+	    </screen>
+	    <screen name="BasicTemplate">
+		<panel name="TopTemplate"/>
+		<panel name="ButtonTemplate"/>
+	    <eLabel position="10,1020" size="1900,2" backgroundColor="white" />
+	    </screen>
+	    <screen name="TextTemplate">
+		<widget name="text" position="30,528" size="720,481" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;30"/>
+	    </screen>
+	    <screen name="SelectionTemplate">
+		<panel name="BasicTemplate"/>
+		<widget source="session.VideoPicture" render="Pig" position="30,120" size="740,380" backgroundColor="transparent" zPosition="1"/>
+	       </screen>
+	    <screen name="PigTemplate">
+		<panel name="SelectionTemplate"/>
+	       </screen>
+  <!-- Setup Panel PIG template -->
+  <screen name="SetupPanelPIG">
     <panel name="PigTemplate" />
-    <panel name="ButtonTemplate" />	
-    <widget source="menu" render="Listbox" position="780,110" size="1110,870" font="Regular;36" backgroundColor="transparent" transparent="1" scrollbarMode="showOnDemand">
-      <convert type="TemplatedMultiContent">
+    <panel name="ConfigTemplate" />
+    <panel name="DescriptionTemplate" />
+    <widget name="HelpWindow" conditional="HelpWindow" pixmap="buttons/vkey_icon.png" position="3,310" zPosition="1" size="1,1" transparent="1" alphatest="on" />
+    <widget name="introduction" conditional="introduction" position="0,0" size="0,0" />
+  </screen>	
+  
+    <!-- Menu Template -->
+	    <screen name="MenuTemplate">
+        <panel name="PigTemplate" />	
+  	    <panel name="Background" />
+		<panel name="ButtonTemplate"/>
+		<widget source="menu" render="Listbox" position="780,105" size="1110,900" font="Regular;32" transparent="1" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (75,15),size = (1035,45),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
 		"fonts": [gFont("Regular",36)],
 		"itemHeight": 75
 	}
 			</convert>
-    </widget>
-  </screen>
-  <!-- VKeyIconPanel -->
-  <!--This conditionally shows "Text" to indicate that the virtual keyboard can be activated by pressing the "Subtitle/Text" button-->
-  <screen name="VKeyIconPanel">
-    <widget source="VKeyIcon" conditional="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" zPosition="10" alphatest="blend" position="30,1032" size="52,38">
-      <convert type="ConditionalShowHide" />
-    </widget>
-  </screen>
+		</widget>
+	</screen>
+<!-- VKeyIconPanel -->
+<!--This conditionally shows "Text" to indicate that the virtual keyboard can be activated by pressing the "Subtitle/Text" button-->
+	<screen name="VKeyIconPanel">
+		<widget source="VKeyIcon" conditional="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" zPosition="10" alphatest="blend" position="30,1032" size="52,38">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
 	
   <!-- Button Graphic Templates -->
 	<screen name="ButtonGraphicRed">
@@ -445,29 +418,29 @@
   <!-- *************************************** -->   
 	<!-- Volume -->
     <screen backgroundColor="background" zPosition="10" flags="wfNoBorder" name="Volume" position="185,30" size="1550,40" title="Volume">
-     <widget backgroundColor="background" font="Regular;30" halign="center" position="1442,3" render="VolumeText" size="60,35" source="global.CurrentTime" zPosition="3" foregroundColor="white" transparent="1" />
+     <widget backgroundColor="background" font="Regular;30" halign="center" position="1442,3" render="VolumeText" size="60,35" source="global.CurrentTime" zPosition="10" foregroundColor="red" transparent="1" />
      <eLabel text="%" position="1505,2" size="40,35" zPosition="5" halign="left" font="Regular;30" backgroundColor="background" transparent="1" />
      <widget name="Volume" pixmap="infobar/volume.png" position="20,10" size="1400,20" zPosition="10" transparent="1" />
     </screen>
     <screen name="Mute" title="Mute" position="140,25" size="45,45" backgroundColor="transparent" zPosition="10" flags="wfNoBorder">
      <ePixmap pixmap="infobar/mute.png" position="0,0" size="45,45" alphatest="on" zPosition="0" />
     </screen>
-  <!-- Buffer Indicator -->
-  <screen name="BufferIndicator" title="" position="c-300,45" size="600,48" backgroundColor="transparent" flags="wfNoBorder" zPosition="100">
-    <widget name="status" position="0,0" size="600,48" backgroundColor="transparent" transparent="1" font="Regular;36" borderColor="black" borderWidth="2" valign="center" halign="center" />
-  </screen>
-  <!-- JobView -->
-  <screen name="JobView" position="fill" title="Job View" flags="wfNoBorder">
-    <panel name="PigTemplate" />
-    <widget source="job_name" render="Label" position="780,105" size="1110,52" font="Regular;37" />
-    <widget source="job_task" render="Label" position="780,282" size="1110,45" font="Regular;36" />
-    <widget source="job_progress" render="Progress" position="780,390" size="1110,54" borderWidth="2" backgroundColor="#254f7497" />
-    <widget source="job_progress" render="Label" position="780,393" size="1110,48" font="Regular;42" foregroundColor="black" zPosition="2" halign="center" transparent="1">
-      <convert type="ProgressToText" />
-    </widget>
-    <widget source="job_status" render="Label" position="780,465" size="1110,39" font="Regular;34" />
-    <widget name="config" position="780,528" size="1110,36" itemHeight="38" font="Regular;28" />
-  </screen>
+<!-- Buffer Indicator -->
+	    <screen name="BufferIndicator" title="" position="c-300,45" size="600,48" backgroundColor="transparent" flags="wfNoBorder" zPosition="100">
+		<widget name="status" position="0,0" size="600,48" backgroundColor="transparent" transparent="1" font="Regular;36" borderColor="black" borderWidth="2" valign="center" halign="center"/>
+	    </screen>
+<!-- JobView -->
+	    <screen name="JobView" position="fill" title="Job View" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<widget source="job_name" render="Label" position="780,105" size="1110,52" font="Regular;37"/>
+		<widget source="job_task" render="Label" position="780,282" size="1110,45" font="Regular;36"/>
+		<widget source="job_progress" render="Progress" position="780,390" size="1110,54" borderWidth="2" backgroundColor="#254f7497"/>
+		<widget source="job_progress" render="Label" position="780,393" size="1110,48" font="Regular;42" foregroundColor="#000000" zPosition="2" halign="center" transparent="1"	>
+	       <convert type="ProgressToText"/>
+		</widget>
+		<widget source="job_status" render="Label" position="780,465" size="1110,39" font="Regular;34"/>
+		<widget name="config" position="780,528" size="1110,36" itemHeight="38" font="Regular;28"/>
+	    </screen>
 
   <!-- InfoBar -->
   <screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
