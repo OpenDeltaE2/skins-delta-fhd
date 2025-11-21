@@ -259,7 +259,7 @@
 		<widget objectTypes="key_green,StaticText" source="key_green.png" render="Pixmap" pixmap="buttons/green.png" position="628,1032" size="34,34" zPosition="1" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<ePixmap objectTypes="key_green,Button,Label" pixmap="green.png" position="628,1032" size="34,34" zPosition="1" alphatest="blend"/>
+		<ePixmap objectTypes="key_green,Button,Label" pixmap="buttons/green.png" position="628,1032" size="34,34" zPosition="1" alphatest="blend"/>
 	</screen>
 
 	<screen name="ButtonGraphicYellow">
