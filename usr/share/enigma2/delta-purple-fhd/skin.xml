@@ -121,7 +121,7 @@
   <!-- *************************************** -->   
 	<!-- Volume -->
     <screen backgroundColor="background" zPosition="10" flags="wfNoBorder" name="Volume" position="185,30" size="1550,40" title="Volume">
-     <widget backgroundColor="background" font="Regular;30" halign="center" position="1442,3" render="VolumeText" size="60,35" source="global.CurrentTime" zPosition="10" foregroundColor="red" transparent="1" />
+     <widget backgroundColor="background" font="Regular;30" halign="center" position="1442,3" render="VolumeText" size="60,35" source="global.CurrentTime" zPosition="8" foregroundColor="white" transparent="1" />
      <eLabel text="%" position="1505,2" size="40,35" zPosition="5" halign="left" font="Regular;30" backgroundColor="background" transparent="1" />
      <widget name="Volume" pixmap="infobar/volume.png" position="20,10" size="1400,20" zPosition="10" transparent="1" />
     </screen>
@@ -138,7 +138,7 @@
 		<widget source="job_name" render="Label" position="780,105" size="1110,52" font="Regular;37"/>
 		<widget source="job_task" render="Label" position="780,282" size="1110,45" font="Regular;36"/>
 		<widget source="job_progress" render="Progress" position="780,390" size="1110,54" borderWidth="2" backgroundColor="#254f7497"/>
-		<widget source="job_progress" render="Label" position="780,393" size="1110,48" font="Regular;42" foregroundColor="#000000" zPosition="2" halign="center" transparent="1"	>
+		<widget source="job_progress" render="Label" position="780,393" size="1110,48" font="Regular;42" foregroundColor="white" zPosition="2" halign="center" transparent="1"	>
 	       <convert type="ProgressToText"/>
 		</widget>
 		<widget source="job_status" render="Label" position="780,465" size="1110,39" font="Regular;34"/>
@@ -1740,7 +1740,7 @@
 		<panel position="top" size="*,50"/>
 		<panel position="top" size="*,50">
 			<ePixmap pixmap="buttons/red.png" position="left" zPosition="0" size="50,34" transparent="1" alphatest="blend"/>
-			<widget name="languagetext" position="fill" font="Regular;34"/>
+			<widget name="languagetext" position="fill" font="Regular;34" foregroundColor="white"/>
 		</panel>
 	</screen>
 	<!-- it's the same screen... -->
@@ -1755,7 +1755,7 @@
 		<panel position="left" size="10,*"/>
 		<panel position="right" size="10,*"/>
 		<panel position="fill">
-			<widget name="text" position="top" size="*,400" font="Regular;34" valign="center"/>
+			<widget name="text" position="top" size="*,400" font="Regular;34" foregroundColor="white" valign="center"/>
 			<widget position="bottom" size="*,50"/>
 			<panel position="fill" layout="stack">
 				<widget source="list" render="Listbox" position="fill" scrollbarMode="showOnDemand">
@@ -2293,7 +2293,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	<screen name="NimSelection" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<panel name="KeyInfoTemplate"/>
-		<widget source="nimlist" render="Listbox" position="780,100" size="1110,880" scrollbarMode="showOnDemand" >
+		<widget source="nimlist" render="Listbox" position="780,100" size="1110,880" foregroundColor="white" scrollbarMode="showOnDemand" >
 		<convert type="TemplatedMultiContent">
 			{"template": [
 				MultiContentEntryText(pos = (15,3), size = (1005,37), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
