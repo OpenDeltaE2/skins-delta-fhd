@@ -102,7 +102,7 @@
     <color name="yellow" value="#00f9c731" />
     <color name="yellowsoft" value="#00ccac68" />
     <color name="yellowtransparent" value="#084b4b00" />
-	<color name="fucsia" value="#f400a1" />
+	<color name="fucsia" value="#f400a1" />	
   </colors>
   <parameters>
     <parameter name="AllowUserDatesAndTimesDisplay" value="1,1" />
@@ -141,11 +141,11 @@
   <!-- Window -->
   <windowstyle id="0" type="skinned">
     <title offset="40,5" font="Regular;32" />
-    <color name="Background" color="transparent" /> <!-- mod -->
+    <color name="Background" color="background" /> <!-- mod -->
     <color name="LabelForeground" color="foreground" />
-    <color name="ListboxBackground" color="background" />
+    <color name="ListboxBackground" color="transpBlack" />
     <color name="ListboxForeground" color="foreground" />
-    <color name="ListboxSelectedBackground" color="selectorcolor" />
+    <color name="ListboxSelectedBackground" color="transpDark" />
     <color name="ListboxSelectedForeground" color="selectedFG" />
     <color name="ListboxMarkedBackground" color="un40a0aa0" />
     <color name="ListboxMarkedForeground" color="red" />
@@ -198,10 +198,10 @@
     <eLabel position="42,105" size="225,195" backgroundColor="transparent" borderWidth="2" font="Regular;37" borderColor="black" halign="left" text="&gt;" zPosition="1" />
     </screen>
       <!-- Logo -->
-  <screen name="logos">  
-    <ePixmap pixmap="/usr/share/enigma2/logos/boxlogo.png" position="46,12" zPosition="2" size="136,64" backgroundColor="transparent" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="../logo/logo-white.png" position="30,967" size="283,51" scale="1" zPosition="1" alphatest="blend" /> 
-  </screen>  
+	<screen name="logos">
+     <ePixmap pixmap="/usr/share/enigma2/logos/boxlogo.svg" position="46,12" zPosition="2" size="136,50" backgroundColor="background" transparent="1" alphatest="blend" halign="center"/>
+     <ePixmap pixmap="/usr/share/enigma2/logos/boxlogo.png" position="46,12" zPosition="2" size="136,64" backgroundColor="background" transparent="1" alphatest="blend" halign="center"/> 
+	</screen> 
    <!-- Template Background -->
   <screen name="Background">
     <ePixmap position="0,0" size="1920,1080" zPosition="-2" pixmap="infobar/bg-black.jpg" alphatest="off" backgroundColor="transparent" />		
@@ -216,12 +216,13 @@
       </widget>
       <widget source="global.CurrentTime" render="Label" position="1700,20" size="220,30" backgroundColor="transparent" transparent="1" zPosition="1" font="Menu;28" valign="center" halign="left">
          <convert type="ClockToText">Format:%H:%M:%S</convert>
-      </widget>	  
+      </widget>
+	     <eLabel position="10,80" size="1900,2" backgroundColor="white" />		 	  
   </screen>
   <screen name="BasicTemplate">
     <panel name="TopTemplate" />
     <panel name="ButtonTemplate" />
-    <eLabel position="0,1022" size="1920,58" backgroundColor="transparent" />
+	<eLabel position="10,1015" size="1900,2" backgroundColor="white" />
   </screen>
   <screen name="TextTemplate">
     <widget name="text" position="30,522" size="720,481" backgroundColor="transparent" transparent="1" zPosition="1" font="Regular;30" />
@@ -232,6 +233,7 @@
     <widget source="session.CurrentService" render="Label" position="30,125" size="720,30" zPosition="1" foregroundColor="white" transparent="1" font="Regular;28" borderColor="black" borderWidth="2" noWrap="1" valign="center" halign="center">
       <convert type="ServiceName">Name</convert>
     </widget>
+	<eLabel position="764,90" size="2,915" backgroundColor="white" />	
   </screen>
   <screen name="PigTemplate">
     <panel name="SelectionTemplate" />
@@ -499,7 +501,7 @@
   <!-- InfoBar -->
   <screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel name="" position="0,0" size="1920,76" backgroundColor="transpBlack" />
-  <ePixmap pixmap="infobar/infobar-dark.png" position="0,840" size="1920,240" transparent="0" zPosition="-3" />
+    <ePixmap pixmap="infobar/infobar-dark.png" position="0,840" size="1920,240" transparent="0" zPosition="-3" />
     <eLabel name="" position="0,1070" size="1920,10" backgroundColor="black" zPosition="-3" /> 
     <eLabel position="0,840" size="1920,2" backgroundColor="red" />	
     <widget backgroundColor="background" font="Menu; 25" position="1410,990" render="Label" size="400,35" source="global.CurrentTime" transparent="1" valign="center">
@@ -661,8 +663,8 @@
     <convert type="MSNWeather">winddisplay</convert>
   </widget>
   <!-- Logo -->
-  <ePixmap pixmap="/usr/share/enigma2/logos/boxlogo.png" position="46,12" zPosition="2" size="136,64" backgroundColor="background" transparent="1" alphatest="blend" />
-  <eLabel text="AREADELTASAT" position="1250,1040" size="300,35" zPosition="8" halign="left" valign="center" font="error;26" backgroundColor="black" transparent="1" foregroundColor="grey" />
+    <panel name="logos" />
+	<eLabel text="AREADELTASAT" position="1250,1040" size="300,35" zPosition="8" halign="left" valign="center" font="error;26" backgroundColor="black" transparent="1" foregroundColor="grey" />
   <!-- TUNER -->
   <eLabel text="Tuner" position="1540,1040" size="200,35" zPosition="8" halign="left" valign="center" font="Regular;28" backgroundColor="black" transparent="1" foregroundColor="yellow" />
   <widget source="session.FrontendInfo" alphatest="blend" pixmap="icons/icons/ta.png" position="1734,1045" render="Pixmap" size="35,35" zPosition="4">
@@ -692,7 +694,7 @@
   <!-- Second infobar -->
   <screen name="SecondInfoBar" title="Second InfoBar" position="0,0" size="1920,840" flags="wfNoBorder">
   <ePixmap position="0,0" size="1920,840" zPosition="0" pixmap="infobar/bg-black.jpg" backgroundColor="transparent" transparent="1" />  
-  <ePixmap pixmap="/usr/share/enigma2/logos/boxlogo.png" position="46,12" zPosition="2" size="136,64" transparent="1" alphatest="blend" />
+    <panel name="logos" />
   <!-- Pig Tv -->  
     <widget source="session.VideoPicture" render="Pig" position="1170,145" size="720,405" backgroundColor="transparent" zPosition="1" />
     <widget source="session.CurrentService" render="Picon" position="1177,584" size="90,45" zPosition="10" transparent="1" alphatest="on">
