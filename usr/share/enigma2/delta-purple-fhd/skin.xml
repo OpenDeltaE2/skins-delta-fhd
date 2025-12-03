@@ -201,7 +201,6 @@
       <!-- Logo -->
 	<screen name="logos">
      <ePixmap pixmap="/usr/share/enigma2/logos/boxlogo.svg" position="46,12" zPosition="2" size="136,50" backgroundColor="background" transparent="1" alphatest="blend" valign="center" halign="center"/>
-     <ePixmap pixmap="/usr/share/enigma2/logos/boxlogo.png" position="46,12" zPosition="2" size="136,64" backgroundColor="background" transparent="1" alphatest="blend" valign="center" halign="center"/> 
 	</screen>  
  
    <!-- Template Background -->
@@ -5419,3 +5418,4 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
   </screen>
   <!-- *************************************** -->      
 </skin>
+
